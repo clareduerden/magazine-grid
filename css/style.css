@@ -1,0 +1,116 @@
+
+@import url('https://fonts.googleapis.com/css?family=Lato|Roboto&display=swap');
+
+:root {
+  --prim-color: #2ab391;
+  --sec-color: #f99500;
+  --light-color: #f3f3f3;
+  --dark-color: #333;
+  --max-width: 1100px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.category {
+  --bus-color: #f99500;
+  --life-color: #009cff;
+  --tech-color: #a66bbe;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  background: var(--light-color);
+}
+
+a {
+  color: var(--dark-color);
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* imgs by default will stretch beyond their container - so make it 100% width by dedault */
+img {
+  width: 100%;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Lato', sans-serif;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+/* Utility Classes start here --------- */
+
+.container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 0 2rem;
+  overflow: hidden;
+}
+
+
+/* Navbar */
+
+#main-nav {
+  background: #fff;
+  /* Make the navbar stick to the top and sit ontop */
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+/* Set up the navbar using CSS grid system */
+#main-nav .container {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 6fr 3fr 2fr;
+  align-items: center;
+  padding: 1rem;
+}
+
+#main-nav .container .logo {
+  width: 50%;
+}
+
+/* display menu items horizontally */
+#main-nav ul {
+  display: flex;
+  justify-self: end;
+}
+
+#main-nav ul li a {
+  padding: 0.75rem;
+}
+
+#main-nav ul li a.current {
+  color: var(--prim-color);
+}
+
+#main-nav ul li a:hover {
+  background: var(--light-color);
+  border-radius: 5px;
+}
+
+/*  */
+
+#main-nav .social {
+  justify-self: start;
+}
+
+#main-nav .social i {
+  margin-right: 0.5rem;
+}
+
