@@ -61,6 +61,41 @@ h1,h2,h3,h4,h5,h6 {
   overflow: hidden;
 }
 
+.category {
+  display: inline-block;
+  color: #fff;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  border-radius: 15px;
+  padding: 0.4rem 0.6rem;
+  margin: 0.5rem 0;
+}
+
+.category-business { background: var(--bus-color); }
+.category-life { background: var(--life-color); }
+.category-tech { background: var(--tech-color); }
+
+.btn {
+  display: inline-block;
+  border: none;
+  background: var(--dark-color);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.btn-primary { background: var(--prim-color); }
+.btn-secondary { background: var(--sec-color); }
+.btn-light { background: var(--light-color); color: var(--dark-color); }
+
+.btn:hover { opacity: 0.8; }
+
+.btn-block {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
 
 /* Navbar */
 
@@ -114,3 +149,48 @@ h1,h2,h3,h4,h5,h6 {
   margin-right: 0.5rem;
 }
 
+
+/* Showcase Area */
+
+#showcase {
+  color: #fff;
+  background: var(--dark-color);
+  padding: 2rem;
+  /* before psuedo selector to be positioned absolute */
+  position: relative;
+}
+
+/* Create image overlay over the dark background color */
+#showcase:before {
+  content: '';
+  background: url('../img/bruce-mars-FWVMhUa_wbY-unsplash.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* Needs width and height for img to show */
+  width: 100%;
+  height: 100%;
+  /* so the dark color behind shows through */
+  opacity: 0.4;
+}
+
+#showcase .showcase-container {
+  display: grid;
+  /* 2 column grid */
+  grid-template-columns: repeat(2, 1fr);
+  height: 50vh;
+  justify-content: center;
+  align-items: center;
+}
+
+/* bring the text content to the front so it is ontop of the image overlay background */
+#showcase .showcase-content {
+  z-index: 1;
+}
+
+#showcase .showcase-content p {
+  margin-bottom: 1rem;
+}
