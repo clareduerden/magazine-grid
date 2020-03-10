@@ -302,6 +302,19 @@ p {
   margin-bottom: 0.4rem;
 }
 
+/* About Page --------------- */
+
+#about .page-container {
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  grid-gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+/* About article to span down 3 rows */
+.page-container > :first-child {
+  grid-row: 1 / span 3;
+}
 
 
 
