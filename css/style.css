@@ -5,7 +5,7 @@
   --prim-color: #2ab391;
   --sec-color: #f99500;
   --light-color: #f3f3f3;
-  --dark-color: #333;
+  --dark-color: #555;
   --max-width: 1100px;
 }
 
@@ -52,7 +52,21 @@ h1,h2,h3,h4,h5,h6 {
   line-height: 1.2;
 }
 
-/* Utility Classes start here --------- */
+input {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+}
+
+form {
+  margin: 0.5rem 0;
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
+/* Utility Classes start here ----------------- */
 
 .container {
   max-width: var(--max-width);
@@ -85,7 +99,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .btn-primary { background: var(--prim-color); }
-.btn-secondary { background: var(--sec-color); }
+.btn-sec { background: var(--sec-color); }
 .btn-light { background: var(--light-color); color: var(--dark-color); }
 
 .btn:hover { opacity: 0.8; }
@@ -123,8 +137,21 @@ h1,h2,h3,h4,h5,h6 {
 .p-2 { padding: 2rem; }
 .p-3 { padding: 3rem; }
 
+.list li {
+  padding: 0.5rem 0;
+  border-bottom: #888 dotted 1px;
+  width: 90%;
+}
 
-/* Navbar */
+.list li a {
+  color: #fff;
+}
+
+.list li a:hover {
+  color: var(--prim-color);
+}
+
+/* Navbar ------------------------- */
 
 #main-nav {
   background: #fff;
@@ -166,8 +193,6 @@ h1,h2,h3,h4,h5,h6 {
   border-radius: 5px;
 }
 
-/*  */
-
 #main-nav .social {
   justify-self: start;
 }
@@ -177,7 +202,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 
-/* Showcase Area */
+/* Showcase Area ------------- */
 
 #showcase {
   color: #fff;
@@ -222,7 +247,7 @@ h1,h2,h3,h4,h5,h6 {
   margin-bottom: 1rem;
 }
 
-/*  Home Articles */
+/*  Home Articles area ------------------ */
 
 #home-articles .articles-container {
   display: grid;
@@ -244,3 +269,40 @@ h1,h2,h3,h4,h5,h6 {
 #home-articles .articles-container > *:last-child {
   grid-column: 2 / span 2;
 }
+
+/* Main Footer -------------------- */
+
+#main-footer {
+  font-size: 0.9rem;
+}
+
+#main-footer img {
+  width: 80%;
+}
+
+#main-footer .footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1.5rem;
+}
+
+#main-footer .footer-container > div {
+  padding: 0.5rem;
+}
+
+#main-footer .footer-container > :last-child {
+  grid-column: 1 / span 4;
+  text-align: center;
+  background: #444;
+  padding: 0.5rem;
+}
+
+#main-footer .footer-container input {
+  width: 90%;
+  margin-bottom: 0.4rem;
+}
+
+
+
+
+
