@@ -137,6 +137,10 @@ p {
 .p-2 { padding: 2rem; }
 .p-3 { padding: 3rem; }
 
+.lg-heading {
+  font-size: 3rem;
+}
+
 .list li {
   padding: 0.5rem 0;
   border-bottom: #888 dotted 1px;
@@ -302,9 +306,10 @@ p {
   margin-bottom: 0.4rem;
 }
 
-/* About Page --------------- */
+/* About and Articles pages */
 
-#about .page-container {
+/* Create CSS Grid on the class of page-contaimer and style*/
+.page-container {
   display: grid;
   grid-template-columns: 5fr 2fr;
   grid-gap: 1.5rem;
@@ -315,6 +320,25 @@ p {
 .page-container > :first-child {
   grid-row: 1 / span 3;
 }
+
+/* Articles page ---------- */
+
+#categories a {
+  color: var(--dark-color);
+}
+
+#categories a:hover {
+  color: var(--prim-color);
+}
+
+#article .meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #eee;
+  padding: 0.4rem;
+}
+
 
 
 
