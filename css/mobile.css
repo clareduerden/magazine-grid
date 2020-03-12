@@ -1,0 +1,114 @@
+/* Navigation Area ------------ */
+
+/* Get rid of Social Icons */
+#main-nav .social {
+  display: none;
+}
+
+/* Change grid to have 1 column only and increase gap */
+#main-nav .container {
+  grid-template-columns: 1fr;
+  grid-gap: 1.2rem;
+  justify-content: center;
+}
+
+/* Center the menu and the logo */
+#main-nav ul,
+#main-nav .logo {
+  justify-self: center;
+}
+
+/* correcting position of logo img file */
+#main-nav .logo {
+  padding-right: 1rem;
+}
+
+/* Reduce padding */
+#main-nav ul li a {
+  padding: 0.5rem;
+}
+
+/* Home Articless area ----------- */
+
+/* Change Grid to be a 2 column layout */
+#home-articles .articles-container {
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0.5rem;
+}
+
+/* Remove the span from the first article */
+#home-articles .articles-container > *:first-child {
+  grid-template-columns: 1fr;
+  grid-column: 1;
+}
+
+/* Correct the span on the last article */
+#home-articles .articles-container > *:last-child {
+  grid-column: 1 / span 2;
+}
+
+/* Media Queries for Smartphones ---------- */
+
+@media(max-width: 600px) {
+
+  /* Reduce size of large heading class */
+  .lg-heading {
+    font-size: 2rem;
+  }
+  /* Reduce showcase padding */
+  #showcase {
+    padding: 0.5rem;
+  }
+  /* Make the Grids have just 1 column */
+  #showcase .showcase-container,
+  #home-articles .articles-container {
+    grid-template-columns: 1fr;
+  }
+
+  /* Remove any spans from the first and last grid items */
+  #home-articles .articles-container > *:first-child,
+  #home-articles .articles-container > *:last-child  {
+    grid-template-columns: 1fr;
+    grid-column: 1;
+  }
+
+  /* Make footer grid just 1 column layout */
+  #main-footer .footer-container {
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+  }
+  
+  /* Add a border under the first 2 items to improve appearance */
+  #main-footer .footer-container > :first-child,
+  #main-footer .footer-container > :nth-child(2) {
+    border-bottom: #999 dotted 1px;
+    padding-bottom: 1rem;
+  }
+
+  /* Remove the span from the last grid item */
+  #main-footer .footer-container > :last-child {
+    grid-column: 1;
+  }
+
+  /* Make Grid on Article and About pages 1 column */
+  .page-container {
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  }
+
+  /* Remove the row span just in case */
+  .page-container > :first-child {
+    grid-row: 1;
+  }
+
+} 
+
+
+@media(max-height:700px) {
+
+  /* Increase showcase height for small height displays */
+  #showcase .showcase-container {
+    height: 80vh;
+  }
+
+}
